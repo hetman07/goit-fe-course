@@ -1,0 +1,140 @@
+/*
+*{
+    outline: 1px solid red; 
+}*/
+html{
+    box-sizing: border-box;/*контентная обл уменьшается*/
+}
+*, *::before, *::after{
+    box-sizing:inherit;
+}
+body{
+    font-family: 'Playfair Display', serif;/*шрифт который подключен в head*/
+    font-size: 14px;
+    font-weight: 400;
+}
+ img{
+    display: block;
+    /* max-width: 100%;
+    height:auto; */
+} 
+.wrapper{
+    width: 900px;/*ширина обертки согласно pdf файлу*/
+    margin: 0 auto; /*центрирую элементы на странице*/
+    border: 1px transparent; /*убираем margin колапс*/
+}
+/*Site header navigation*/
+/* .page-header{
+    margin-top: 76px;
+    margin-bottom: 102px;
+} */
+.main-nav{
+    padding:76px 0 102px 0; /*расширила контентную область*/
+}
+.nav-menu
+{
+    margin:0 auto;
+    padding: 0;
+    list-style: none;
+    font-size: 0px; /*убрать зазор переноса строки*/
+    /* background: rgb(32, 145, 32); */
+    vertical-align: middle;
+}
+.nav-menu-item
+{
+    display:inline-block;
+    /* background: rgb(35, 18, 136); */
+    margin-right: 102px;
+    font-size: 14px; /*убрать зазор переноса строки*/
+}
+.main-nav .nav-menu-item:last-child
+{margin-right: 170px;}
+.nav-menu .nav-menu-item:first-child
+{margin-left: 170px;}
+
+.nav-menu-item a
+{
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;/*шрифт который подключен в head*/
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: uppercase;/*заглавные буквы*/
+    color:rgb(98, 98, 98)
+}
+.nav-menu-item a:hover,
+.nav-menu-item a:focus{
+    color:rgb(3, 169, 244)
+}
+/*Main content*/
+.article-list
+{
+    margin:0 auto;
+    padding: 0;
+    list-style: none;
+    font-size: 0px;/* убрать зазор перенос строки */
+}
+.article-list-item
+{
+    width: 420px;
+    display:inline-block;
+    margin-right: 60px;
+    font-size: 14px;/* убрать зазор перенос строки */
+    text-align: left;
+    margin-bottom: 134px;
+}
+.article-list-item:nth-child(2n)/*у каждого второго li убрать правый зазор margin*/
+{
+    margin-right: 0px;
+}
+.article-list-item:nth-last-child(-n+2){
+    margin-bottom: 54px; /*у последних двух li margin задается свой*/
+} 
+ .article-list-item-img{
+    margin-bottom: 30px;
+}
+.article-list-item-part{
+    margin-top: 0px;
+    margin-bottom: 28px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size:14px;
+    line-height:24px;
+    text-transform: uppercase;/*заглавные буквы*/
+    text-align: left;
+    color: rgb(190, 184, 171)
+}
+.article-list-item-title{
+    margin-top: 0px;
+    margin-bottom: 40px;
+    font-family: 'Playfair Display', serif;
+    font-size:30px;
+    /* line-height: auto; */
+    /* font-weight: 700; */
+    text-align: left;
+    color: rgb(98, 98, 98)
+}
+.article-list-item-text{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: 'Playfair Display', serif;
+    font-size:14px;
+    line-height:24px;
+    text-align: left;
+    color: rgb(98, 98, 98);
+    text-align: justify; /*выравнивание текста по ширине*/
+}
+.push-button {
+    background-color: white;
+    border: 1px solid rgb(98, 98, 98);
+    color: rgb(98,98,98);
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    padding: 21px 34px 21px 34px;
+    width: 164px;
+    height: 60px;
+    margin: 0px 380px 70px 358px;
+}
+.push-button:first-letter {
+    text-transform: uppercase;/*заглавные буквы*/
+  }
+ 
