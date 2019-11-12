@@ -39,7 +39,7 @@ body{
 .wrapper{
     width: 900px;/*ширина обертки согласно pdf файлу*/
     margin: 0 auto; /*центрирую элементы на странице*/
-    border: 1px transparent; /*убираем margin колапс*/
+    /*border: 1px transparent; /*убираем margin колапс*/
 }
 /*Site header navigation*/
 .main-nav{
@@ -47,12 +47,13 @@ body{
 }
 .nav-menu
 {
-    /* margin:0 auto; */
-    padding: 0px 170px 0px 170px;/*крайние отступы меню навигации*/
+    margin:0 auto; 
+    padding: 0;
     list-style: none;
     font-size: 0px; /*убрать зазор переноса строки*/
      /* background: rgb(32, 145, 32);  */
     vertical-align: middle;
+    text-align: center;
 }
 .nav-menu-item
 {
@@ -82,9 +83,9 @@ body{
 }
 /*Main content*/
 
-/* .section-content{
-    margin-bottom:70px
-} */
+.section-content{
+    padding-bottom:70px
+} 
 .article-list
 {
     margin:0 0 54px 0;
@@ -141,24 +142,27 @@ body{
     color: rgb(98, 98, 98);
     text-align: justify; /*выравнивание текста по ширине*/
 }
-.load-button{
-    display: inline-block;
-    margin:0px;
-    padding: 0 358px 70px;
-}
 .push-button {
+
+    display: block; /*чтобы кнопка стала по центру листа*/
+    margin: 0 auto; /*чтобы кнопка стала по центру листа*/
     border: 1px solid rgb(98, 98, 98);
-    margin: 0px;
+    /* text-align: center; */
     padding: 24px 32px 18px 32px;
     background-color: white;
     font-size: 20px;
     color: rgb(98,98,98);
     line-height: 24px;
-    text-align: center;
     text-decoration: none;
     cursor: pointer;
+}
+.push-button:hover{
+    color: rgb(3, 169, 244);
 }
 .article-list-item-title:first-letter,
 .push-button:first-letter {
     text-transform: uppercase;/*заглавные буквы*/
+}
+.section-content{
+
 }
