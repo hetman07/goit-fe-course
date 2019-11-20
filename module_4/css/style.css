@@ -100,8 +100,7 @@ img{
 }
 /*Main content*/
 /*PRODUCTS*/
-.title-product,
-.title-news{
+.title{
     margin: 0 auto;
     padding: 0;
     text-align: center;
@@ -113,8 +112,7 @@ img{
     text-transform: uppercase;/*заглавные буквы*/
     margin-bottom: 92px;
 }
-.title-product::after,
-.title-news::after{
+.title::after{
     display: block;
     width: 164px;
     height: 7px;
