@@ -168,7 +168,7 @@ img{
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
     font-size: 18px;
-    line-height: 32px;
+    line-height: 40px;
     text-transform: uppercase;/*заглавные буквы*/
     color: rgb(255, 255, 255);
     /* padding-top: 5px;  */
@@ -248,12 +248,8 @@ span{
     font-weight: 300;
     line-height: 26px;
     font-size: 16px;
-    border-radius: 4px;
-    
-box-shadow: 0 2px 5px rgba(0,0,0,0.3),
-            0 2px 5px rgba(0,0,0,0.4);
+    border-radius: 3px;
 }
 .item-news a:hover{
-box-shadow: 0 14px 28px rgba(0,0,0,0.3),
-            0 10px 10px rgba(0,0,0,0.4);
+box-shadow: 0 2px 5px 0px rgba(0,0,0,0.39);
 }
