@@ -1,0 +1,405 @@
+
+/*
+*{
+    outline: 1px solid red; 
+}*/
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden
+{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0px;
+    padding: 0px;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip:rect(0 0 0 0);
+    overflow: hidden;
+}
+html{
+    box-sizing: border-box;/*контентная обл уменьшается*/
+}
+*, *::before,
+*::after{
+    box-sizing:inherit;
+}
+body{
+    font-family: 'Roboto', sans-serif;/*шрифт который подключен в head*/
+    font-size: 18px;
+    font-weight: 900;/*black*/
+    line-height: 32px;
+}
+img{
+    display: block;
+    max-width: 100%;
+    height:auto;
+}
+.wrapper{
+    width: 1110px;/*ширина обертки согласно pdf файлу*/
+    margin: 0 auto; /*центрирую элементы на странице*/
+}
+.clearfix::after{/*очистка для родителя там где применfloat*/
+    display:table;
+    content:'';
+    clear:both;
+}
+/*Site header navigation*/
+.page-header{
+    margin:0 auto;}
+.main-nav{
+    margin:0px;
+    padding: 36px 0px 30px 0px;
+}
+.logo{
+    float:left;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;/*шрифт который подключен в head*/
+    font-weight: 300;/*light*/
+    font-size: 30px;
+    line-height: 32px;
+    text-transform: uppercase;/*заглавные буквы*/
+    color:rgb(85, 82, 82)
+}
+.logo:first-letter
+{
+    color: rgb(26, 188, 156);
+    font-weight: 700;/*bold*/
+}
+.nav-menu{
+    float: right;
+    width: 466px;
+    list-style: none;
+    padding: 10px 0 0 0;
+    margin: 0;
+    text-align: center;
+}
+.nav-menu-item
+{
+    float: left;
+    margin-right: 30px;
+}
+.nav-menu .nav-menu-item:last-child
+{margin-right: 0px;}
+.nav-menu-item a
+{
+    display:block; /*ссылка была во всем блоке*/
+    text-decoration: none;
+    color:rgb(15, 1, 1);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 11px;
+    text-transform: uppercase;/*заглавные буквы*/
+}
+.nav-menu-item a:hover,
+.nav-menu-item a:focus{
+    color:rgb(26, 188, 156)
+}
+main{
+    background: rgb(233, 240, 253);
+}
+/* BANNER & SLIDER */
+.banner{
+     background-image: 
+    /*linear-gradient(rgba(0,0,2,0.52),
+                                      rgba(0,0,2,0.52)), */
+                      url('../img/slide4.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 600px;
+    margin-bottom: 102px;
+}
+.slider{
+    position: relative;
+    width: 1110px;
+    height: 600px;
+    margin: 0 auto;
+}
+.list-slider{
+    list-style: none;
+}
+.slider-ctrl{
+    position: absolute;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    width: 104px;
+    height: 104px;
+    border: none;
+    background: rgb(84, 161, 143);
+    cursor: pointer;
+    /* z-index: 1; */
+}
+.slider-ctrl:hover{
+    background: rgb(26, 188, 156);
+}
+.slider-ctrl-prev{
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+}
+.slider-ctrl-next{
+    bottom: 50%;
+    right: 0%;
+    transform: translate(0%, 50%);
+}
+.slider-ctrl>span{
+    margin: 0 auto;
+    padding: 0;
+    /* text-align: center; */
+    font-size: 100px;
+    line-height: 100px;
+    color: rgb(255, 255, 255);
+    font-family: "Pe";
+}
+.list-slider{
+    position: absolute;
+    width: 764px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    padding: 0;
+}
+
+.title-slider
+{
+    text-align: left;
+    text-transform: uppercase;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 60px;
+    line-height: 82px;
+    color: rgb(255, 255, 255);
+}
+.kind-tour{
+    text-align: left;
+    text-transform: uppercase;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 24px;
+    line-height: 54px;
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+}
+
+/*collection*/
+.title{
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(81,81,81);
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 32px;
+    text-transform: uppercase;/*заглавные буквы*/
+    margin-bottom: 92px;
+}
+.title::after{
+    display: block;
+    width: 164px;
+    height: 7px;
+    background-color: rgb(26, 188, 156);
+    content:'';
+    margin:0 auto;
+    margin-top: 39px;/*зазор для рысочки от текста растояние*/
+}
+.collection{
+    margin-bottom: 100px;
+}
+.list-collection
+{
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+.item-list-collection
+{
+    position: relative;
+    float: left;
+    width: 255px;
+    height: 325px;
+    margin: 0px;
+    padding: 0px;
+    margin-right: 30px;
+    background-color: rgb(255, 255, 255);
+}
+.item-list-collection:nth-child(4n)/*у каждого 4го li убрать правый зазор margin*/
+{
+    margin-right: 0px;
+} 
+.item-list-collection:not(:nth-last-child(-n+4)){
+    margin-bottom: 30px; /*у всех кроме последних 4х li margin задается свой*/
+}
+.item-list-collection:hover .name-produc{
+    background-color: rgb(26, 188, 156);
+}
+.item-list-collection:hover .price-prod{
+    background-color: rgb(127, 217, 199);
+}
+.item-list-collection:hover .overlay{
+    opacity: 1;
+    background-color: rgba(0,0,0,0.55);
+}
+
+.name-produc{
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    display: block;
+    /*vertical-align: middle; */
+    float: left;
+    width: 255px;
+    height:40px;
+    background-color: rgb(50,50,50);
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 40px;
+    text-transform: uppercase;/*заглавные буквы*/
+    color: rgb(255, 255, 255);
+    /* padding-top: 5px;  */
+    padding-left: 14px;
+}
+.item-list-collection .price-prod{
+    display: block;
+    float: right;
+    width: 54px;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: center;
+    margin: 0 auto;
+    padding:0;
+    background-color: rgb(140,140,140);
+}
+/* OVERLAY */
+.overlay{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+
+    margin: 0 auto;
+    padding: 0;
+
+    width: 255px;
+    height: 285px;
+
+    border-width: 10px;
+    border-color: rgb(255,255,255);
+    border-style: solid;
+
+opacity: 0;
+}
+
+.list-overlay{
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin-bottom: 6px;
+    width: 164px;
+
+}
+ 
+.item-icon{
+    position: relative;
+    float: left;
+    margin: 0 auto;
+    padding: 0;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    width: 48px;
+    height: 48px;
+    margin-right: 9px;
+
+}
+.item-icon:hover{
+    border: none;
+    background-color: rgb(26, 188, 156);
+    z-index: 2;
+
+}
+.item-icon:last-child
+{
+    margin-right: 0px;
+}
+.icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+.overlay-button{
+    display: block; /*чтобы кнопка стала по центру листа*/
+    margin: 0 auto; /*чтобы кнопка стала по центру листа*/
+    width: 164px;
+    height: 48px;
+    border: 1px solid rgb(255, 255, 255);
+
+    background-color: rgb(50,50,50);
+    font-size: 14px;
+    color: rgb(255,255,255);
+    line-height: 32px;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+.overlay-button::before{
+    content: '';
+    width: 28px;
+    height: 27px;
+    background-image: url('../img/1.png');
+    background-size: contain;
+    background-position: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+.text-but{
+    margin-left: 16px;
+}
+.img-overlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* FOOTER */
+.footer{
+
+    background-color: rgb(50,50,50);
+}
+.text-footer,
+.link-footer{
+    text-decoration: none;
+    width: 1110px;
+
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 30px;
+    padding-bottom: 26px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    color: rgb(254,254,254);
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.link-footer{
+    color: rgb(70,191,169);
+}
+
+
