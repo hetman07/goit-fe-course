@@ -72,7 +72,7 @@ img{
 }
 .nav-menu{
     float: right;
-    width: 466px;
+    width: 480px;
     list-style: none;
     padding: 10px 0 0 0;
     margin: 0;
@@ -85,11 +85,12 @@ img{
 }
 .nav-menu .nav-menu-item:last-child
 {margin-right: 0px;}
-.nav-menu-item a
+.nav-menu-item>a
 {
     display:block; /*ссылка была во всем блоке*/
     text-decoration: none;
     color:rgb(15, 1, 1);
+    font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 14px;
     line-height: 11px;
@@ -104,10 +105,7 @@ main{
 }
 /* BANNER & SLIDER */
 .banner{
-     background-image: 
-    /*linear-gradient(rgba(0,0,2,0.52),
-                                      rgba(0,0,2,0.52)), */
-                      url('../img/slide4.jpg');
+     background-image: url('../img/slide4.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -133,40 +131,42 @@ main{
     border: none;
     background: rgb(84, 161, 143);
     cursor: pointer;
-    /* z-index: 1; */
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .slider-ctrl:hover{
     background: rgb(26, 188, 156);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .slider-ctrl-prev{
     top: 50%;
     left: 0%;
     transform: translate(0%, -50%);
+    background-image: url('../img/arrow_l.png');
+}
+.slider-ctrl-prev:hover{
+    background-image: url('../img/arrow_l.png');
 }
 .slider-ctrl-next{
     bottom: 50%;
     right: 0%;
     transform: translate(0%, 50%);
+    background-image: url('../img/arrow_r.png');
 }
-.slider-ctrl>span{
-    margin: 0 auto;
-    padding: 0;
-    /* text-align: center; */
-    font-size: 100px;
-    line-height: 100px;
-    color: rgb(255, 255, 255);
-    font-family: "Pe";
+.slider-ctrl-next:hover{
+    background-image: url('../img/arrow_r.png');
 }
+
 .list-slider{
     position: absolute;
-    width: 764px;
+    width: 740px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin: 0 auto;
     padding: 0;
 }
-
 .title-slider
 {
     text-align: left;
@@ -174,6 +174,7 @@ main{
     margin: 0 auto;
     padding: 0;
     font-size: 60px;
+    font-weight: 900;
     line-height: 82px;
     color: rgb(255, 255, 255);
 }
@@ -211,7 +212,7 @@ main{
     margin-top: 39px;/*зазор для рысочки от текста растояние*/
 }
 .collection{
-    margin-bottom: 100px;
+    padding-bottom: 100px;
 }
 .list-collection
 {
@@ -253,7 +254,6 @@ main{
     bottom: 0%;
     right: 0%;
     display: block;
-    /*vertical-align: middle; */
     float: left;
     width: 255px;
     height:40px;
@@ -265,7 +265,6 @@ main{
     line-height: 40px;
     text-transform: uppercase;/*заглавные буквы*/
     color: rgb(255, 255, 255);
-    /* padding-top: 5px;  */
     padding-left: 14px;
 }
 .item-list-collection .price-prod{
@@ -310,23 +309,21 @@ opacity: 0;
 }
  
 .item-icon{
+
     position: relative;
     float: left;
     margin: 0 auto;
     padding: 0;
-    border-width: 1px;
-    border-color: rgb(255, 255, 255);
+    margin-right: 9px;
+
+    border: 1px solid  rgb(255, 255, 255);
     border-style: solid;
     width: 48px;
     height: 48px;
-    margin-right: 9px;
-
 }
 .item-icon:hover{
     border: none;
     background-color: rgb(26, 188, 156);
-    z-index: 2;
-
 }
 .item-icon:last-child
 {
@@ -337,7 +334,28 @@ opacity: 0;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
+
+    margin: 0 auto;
+    padding: 0;
+
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    width: 48px;
+    height: 48px;
+    background: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+.icon-hard{
+    background-image: url('../img/hards.png');
+}
+.icon-arrow{
+    background-image: url('../img/2.png');
+}
+.icon-time{
+    background-image: url('../img/time.png');
 }
 .overlay-button{
     display: block; /*чтобы кнопка стала по центру листа*/
@@ -369,6 +387,7 @@ opacity: 0;
 }
 .text-but{
     margin-left: 16px;
+    vertical-align: middle;
 }
 .img-overlay{
     position: absolute;
