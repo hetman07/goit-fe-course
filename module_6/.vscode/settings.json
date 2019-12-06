@@ -1,6 +1,0 @@
-{
-    "editor.codeActionsOnSaveTimeout": 1,
-    "editor.formatOnSaveTimeout": 1,
-    "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 1
-}

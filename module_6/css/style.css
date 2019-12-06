@@ -1,4 +1,3 @@
-
 /*
 *{
     outline: 1px solid red; 
@@ -20,9 +19,11 @@ input[type="radio"].visually-hidden
     clip:rect(0 0 0 0);
     overflow: hidden;
 }
+
 html{
     box-sizing: border-box;/*контентная обл уменьшается*/
 }
+
 *, *::before,
 *::after{
     box-sizing:inherit;
@@ -40,7 +41,7 @@ img{
     max-width: 100%;
     height:auto;
 }
-
+/*  */
 .conteiner{
     margin: 0;
     padding: 0;
@@ -106,7 +107,7 @@ img{
     justify-content: space-between;
     flex-wrap: wrap;
     
-    width: 480px;
+    flex-basis: 480px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -123,18 +124,6 @@ img{
     transition: color 0.5s linear;
 }
 
- .item::after {
-    opacity: 0;
-    display: block;
-    margin: 0 auto;
-    margin-top: 10px;
-    width: 50px;
-    height: 3px;
-    background-color: rgb(243,129,129);
-    content: '';
-} 
-
-
 .nav-menu-item .item:hover,
 .nav-menu-item .item:focus
 {
@@ -144,13 +133,25 @@ img{
 .nav-menu-item .item:hover::after,
 .nav-menu-item .item:focus::after
 {
-    /* color: rgb(243,129,129); */
-    animation: sheen 1s linear; 
+    opacity: 0;
+    display: block; /**чтобы рысочка была под текстом*/
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 50px;
+    height: 3px;
+    background-color: rgb(243,129,129);
+    content: '';
+ 
+    animation: liner 1000ms linear; 
+    /* animation-play-state: paused; */
 }
 
-@keyframes sheen {
-    100% {
-      opacity: 1;
+@keyframes liner {
+    from{
+      opacity: 0;
+    }
+    to{
+        opacity: 1;
     }
   }
 
@@ -170,14 +171,15 @@ img{
     font-size: 30px;
     margin: 0 auto;
     padding: 0;
-    margin-bottom: 108px;
+    margin-bottom: 64px;
 }
 
 .title-cursiv{
     display: block;
     font-family: 'Kaushan Script', cursive;
     font-weight: 400;
-    font-size: 24px;    
+    font-size: 24px;
+    line-height: 54px;    
 }
 .title-cursiv::first-letter{
     text-transform: uppercase;
@@ -299,14 +301,34 @@ img{
     position: relative;
 }
 
-.item-team:hover .img-overlay
+.item-team:hover .div-overlay17,
+.item-team:focus .div-overlay17
 {    
     opacity: 1;
-    transform: translate(-10px,-10px);
+    transform: translate(-10px,-15px);
+}
+
+.item-team:hover .div-overlay18,
+.item-team:focus .div-overlay18
+{    
+    opacity: 1;
+    transform: translate(-10px,-15px);
+}
+
+.item-team:hover .div-overlay19,
+.item-team:focus .div-overlay19
+{    
+    opacity: 1;
+    transform: translate(-10px,-15px);
 }
 
 .img-team{
     margin-bottom: 24px;
+}
+
+.item-team:hover .img-team,
+.item-team:focus .img-team{
+    border: 10px solid rgb(149,225,211);
 }
 
 .name-team{
@@ -323,19 +345,51 @@ img{
 
 }
 /* team overlay OVERLAY */
-.img-overlay{
+.div-overlay17{
     display: flex; /*отцентрировать по ширине блока main cross*/
     align-items: center; /*отцентрировать по высоте блока across*/
     width: 380px;
     height: 470px;
-    background: linear-gradient(to top,  rgba(252, 227, 138, 0.9), 
-                                         rgba(243, 129, 129, 0.9)
-                                ); 
-
-    position: absolute; /*подложку для hover*/
+    position: absolute; /*подложку для hover item-team*/
     top: 0;
     left: 0;
     opacity: 0;
+    background: linear-gradient(to top,  rgba(252, 227, 138, 0.9), 
+                                         rgba(243, 129, 129, 0.9)
+                                ),
+                url("/img/Layer 16.png");
+    transition: transform 0.2s linear;
+}
+
+.div-overlay18{
+    display: flex; /*отцентрировать по ширине блока main cross*/
+    align-items: center; /*отцентрировать по высоте блока across*/
+    width: 380px;
+    height: 470px;
+    position: absolute; /*подложку для hover item-team*/
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background: linear-gradient(to top,  rgba(252, 227, 138, 0.9), 
+                                         rgba(243, 129, 129, 0.9)
+                                ),
+                url("/img/Layer 18.png");
+    transition: transform 0.2s linear; /*что бы плавно появлялась анимация*/
+}
+.div-overlay19{
+    display: flex; /*отцентрировать по ширине блока main cross*/
+    align-items: center; /*отцентрировать по высоте блока across*/
+    width: 380px;
+    height: 470px;
+    position: absolute; /*подложку для hover item-team*/
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background: linear-gradient(to top,  rgba(252, 227, 138, 0.9), 
+                                         rgba(243, 129, 129, 0.9)
+                                ),
+                url("/img/Layer 19.png");
+    transition: transform 0.2s linear;
 }
 
 .team-list-social{
@@ -352,9 +406,13 @@ img{
     margin: 0 auto;
     padding: 0;   
     background-color: rgb(252, 227, 138);
-
+    
     /* border: 1px solid rgb(243,129,129); */
 }
+
+/* .team-list-social li:nth-child(-n + 3){
+    border-right: 1px solid rgb(243,129,129); 
+} */
 
 .team-list-social a:hover,
 .team-list-social a:focus{
@@ -365,18 +423,24 @@ img{
     background-image: url("../img/icon/facebook.png");
     background-repeat: no-repeat;
     background-position: center;
+
+    border-right: 1px solid rgb(243,129,129);
 }
 
 .icon-twitter{
     background-image: url("../img/icon/twitter.png");
     background-repeat: no-repeat;
     background-position: center;
+
+    border-right: 1px solid rgb(243,129,129);
 }
 
 .icon-pinterest{
     background-image: url("../img/icon/pinterest.png");
     background-repeat: no-repeat;
     background-position: center;
+
+    border-right: 1px solid rgb(243,129,129);
 }
 
 .icon-instagram{
