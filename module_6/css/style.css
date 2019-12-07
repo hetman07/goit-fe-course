@@ -129,8 +129,8 @@ img{
     transition: color 0.4s linear;
 }
 
-.item:hover,
-.item:focus
+.nav-menu-item:hover .item,
+.nav-menu-item:focus .item
 {
     color: rgb(243,129,129);
     transition: 0.4s linear;
