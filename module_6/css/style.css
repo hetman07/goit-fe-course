@@ -113,6 +113,11 @@ img{
     padding: 0;
 }
 
+.nav-menu-item{
+    padding-bottom: 10px;
+    border-bottom: 2px solid transparent;
+    transition: 0.4s linear;
+}
 .nav-menu-item>a
 {   
     text-decoration: none;
@@ -121,20 +126,29 @@ img{
     font-weight: 700;
     font-size: 14px;
     text-transform: uppercase;/*заглавные буквы*/
-    transition: color 0.5s linear;
+    transition: color 0.4s linear;
 }
 
-.nav-menu-item .item:hover,
-.nav-menu-item .item:focus
+.item:hover,
+.item:focus
 {
     color: rgb(243,129,129);
+    transition: 0.4s linear;
 }
 
-.nav-menu-item .item:hover::after,
+.nav-menu-item:hover,
+.nav-menu-item:focus
+{
+    color: rgb(243,129,129);
+    border-bottom: 3px solid rgb(243,129,129);
+    transition: 0.4s linear;
+}
+
+/* .nav-menu-item .item:hover::after,
 .nav-menu-item .item:focus::after
 {
     opacity: 0;
-    display: block; /**чтобы рысочка была под текстом*/
+    display: block; 
     margin: 0 auto;
     margin-top: 10px;
     width: 50px;
@@ -143,7 +157,7 @@ img{
     content: '';
  
     animation: liner 1000ms linear; 
-    /* animation-play-state: paused; */
+
 }
 
 @keyframes liner {
@@ -153,7 +167,7 @@ img{
     to{
         opacity: 1;
     }
-  }
+  } */
 
 
 /* TITLE SERVICES&TEAM */
