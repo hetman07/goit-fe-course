@@ -114,7 +114,6 @@ img{
     padding: 0;
 }
 
-<<<<<<< HEAD
 /* .nav-menu-item{ 
     padding-bottom: 10px; 
     border-bottom: 2px solid transparent;
@@ -124,20 +123,10 @@ img{
 /* .nav-menu-item:hover,
 .nav-menu-item:focus
 {
-
     border-bottom: 2px solid rgb(243,129,129);
-
 } */
 
 .nav-menu-item .item
-=======
-.nav-menu-item{
-    padding-bottom: 10px;
-    border-bottom: 2px solid transparent;
-    transition: 0.4s linear;
-}
-.nav-menu-item>a
->>>>>>> 1e8c231a7a31a65179ee885aecd0b9f94dee5f1a
 {   
     text-decoration: none;
     color:rgb(26, 188, 156);
@@ -145,14 +134,7 @@ img{
     font-weight: 700;
     font-size: 14px;
     text-transform: uppercase;/*заглавные буквы*/
-<<<<<<< HEAD
     transition: color 0.5s linear;  
-}
-
-.nav-menu-item:hover .item,
-.nav-menu-item:focus .item
-{
-    color: rgb(243,129,129);     
 }
 
 .nav-menu-item::after{
@@ -172,9 +154,6 @@ img{
     content: '';
     transform: scaleX(1); /*показываю рысочку*/ 
 } 
-=======
-    transition: color 0.4s linear;
-}
 
 .nav-menu-item:hover .item,
 .nav-menu-item:focus .item
@@ -182,41 +161,6 @@ img{
     color: rgb(243,129,129);
     transition: 0.4s linear;
 }
-
-.nav-menu-item:hover,
-.nav-menu-item:focus
-{
-    color: rgb(243,129,129);
-    border-bottom: 3px solid rgb(243,129,129);
-    transition: 0.4s linear;
-}
-
-/* .nav-menu-item .item:hover::after,
-.nav-menu-item .item:focus::after
-{
-    opacity: 0;
-    display: block; 
-    margin: 0 auto;
-    margin-top: 10px;
-    width: 50px;
-    height: 3px;
-    background-color: rgb(243,129,129);
-    content: '';
- 
-    animation: liner 1000ms linear; 
-
-}
-
-@keyframes liner {
-    from{
-      opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-  } */
-
->>>>>>> 1e8c231a7a31a65179ee885aecd0b9f94dee5f1a
 
 /* TITLE SERVICES&TEAM */
 .service{
