@@ -62,7 +62,7 @@ img{
 /*Site header navigation*/
 .page-header{
     margin: 0 auto;
-    height: 100px;
+    min-height: 100px;
 }
 
 .main-nav{
@@ -106,6 +106,7 @@ img{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    align-items: center;
     
     flex-basis: 480px;
     list-style: none;
@@ -113,7 +114,21 @@ img{
     padding: 0;
 }
 
-.nav-menu-item>a
+/* .nav-menu-item{ 
+    padding-bottom: 10px; 
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.4s linear; 
+}
+/* появление подчеркивания с помощью закрашивания границы */
+/* .nav-menu-item:hover,
+.nav-menu-item:focus
+{
+
+    border-bottom: 2px solid rgb(243,129,129);
+
+} */
+
+.nav-menu-item .item
 {   
     text-decoration: none;
     color:rgb(26, 188, 156);
@@ -121,40 +136,32 @@ img{
     font-weight: 700;
     font-size: 14px;
     text-transform: uppercase;/*заглавные буквы*/
-    transition: color 0.5s linear;
+    transition: color 0.5s linear;  
 }
 
-.nav-menu-item .item:hover,
-.nav-menu-item .item:focus
+.nav-menu-item:hover .item,
+.nav-menu-item:focus .item
 {
-    color: rgb(243,129,129);
+    color: rgb(243,129,129);     
 }
 
-.nav-menu-item .item:hover::after,
-.nav-menu-item .item:focus::after
-{
-    opacity: 0;
-    display: block; /**чтобы рысочка была под текстом*/
-    margin: 0 auto;
-    margin-top: 10px;
+.nav-menu-item::after{
+    content: '';
+    display: block; 
+    margin: 0 auto; 
+    margin-top: 10px; 
     width: 50px;
     height: 3px;
-    background-color: rgb(243,129,129);
-    content: '';
- 
-    animation: liner 1000ms linear; 
-    /* animation-play-state: paused; */
+    background-color: rgb(243,129,129); 
+    transition: transform 200ms ease-in-out; /*указываю что меняю*/
+    transform: scaleX(0); /*ужимаю псевдоэлемент до нуля*/
 }
 
-@keyframes liner {
-    from{
-      opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-  }
-
+.nav-menu-item:hover::after,
+.nav-menu-item:focus::after{   
+    content: '';
+    transform: scaleX(1); /*показываю рысочку*/ 
+} 
 
 /* TITLE SERVICES&TEAM */
 .service{
@@ -162,7 +169,6 @@ img{
 }
 
 .title-section{
-    /* margin-top: 108px; */
     text-align: center;
     text-transform: uppercase; 
     font-family: 'Montserrat', sans-serif;
@@ -290,46 +296,67 @@ img{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* width: 380px; */
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
 .item-team{
-    flex-basis: 380px;
-    position: relative;
-}
-
-.item-team:hover .div-overlay17,
-.item-team:focus .div-overlay17
-{    
-    opacity: 1;
-    transform: translate(-10px,-15px);
-}
-
-.item-team:hover .div-overlay18,
-.item-team:focus .div-overlay18
-{    
-    opacity: 1;
-    transform: translate(-10px,-15px);
-}
-
-.item-team:hover .div-overlay19,
-.item-team:focus .div-overlay19
-{    
-    opacity: 1;
-    transform: translate(-10px,-15px);
+    flex-basis: 380px; 
+    position: relative; 
 }
 
 .img-team{
-    margin-bottom: 24px;
+    width: 380px;
+    height: 470px;
+    margin-bottom: 24px;  
 }
 
 .item-team:hover .img-team,
 .item-team:focus .img-team{
     border: 10px solid rgb(149,225,211);
 }
+
+.div-overlay17{
+    display: flex; /*отцентрировать по ширине блока main cross*/
+    align-items: center; /*отцентрировать по высоте блока across*/
+    width: 380px;
+    height: 470px;
+    position: absolute; /*подложку для hover item-team*/
+    top: 0;
+    left: 0;
+    
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to top,  rgba(252, 227, 138, 0.9), 
+                                         rgba(243, 129, 129, 0.9)
+                                ),
+                url("/img/Layer 16.png");
+    transition: transform 0.2s linear;
+    opacity: 0;
+}
+
+.item-team:hover .div-overlay17,
+.item-team:focus .div-overlay17
+{    
+    opacity: 1;
+    transform: translate(-10px,-10px);
+}
+
+.item-team:hover .div-overlay18,
+.item-team:focus .div-overlay18
+{    
+    opacity: 1;
+    transform: translate(-10px,-10px);
+}
+
+.item-team:hover .div-overlay19,
+.item-team:focus .div-overlay19
+{    
+    opacity: 1;
+    transform: translate(-10px,-10px);
+}
+
 
 .name-team{
     margin: 0 auto;
@@ -345,21 +372,7 @@ img{
 
 }
 /* team overlay OVERLAY */
-.div-overlay17{
-    display: flex; /*отцентрировать по ширине блока main cross*/
-    align-items: center; /*отцентрировать по высоте блока across*/
-    width: 380px;
-    height: 470px;
-    position: absolute; /*подложку для hover item-team*/
-    top: 0;
-    left: 0;
-    opacity: 0;
-    background: linear-gradient(to top,  rgba(252, 227, 138, 0.9), 
-                                         rgba(243, 129, 129, 0.9)
-                                ),
-                url("/img/Layer 16.png");
-    transition: transform 0.2s linear;
-}
+
 
 .div-overlay18{
     display: flex; /*отцентрировать по ширине блока main cross*/
@@ -454,14 +467,14 @@ img{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 66px;
+    min-height: 66px;
     border-top: 1px solid rgb(229,229,229);
 }
 
 .text-footer,
 .link-footer{
     text-decoration: none;
-    width: 1110px;
+    /* width: 1110px; */
     margin: 0;
     padding: 0;
     padding-top: 30px;
