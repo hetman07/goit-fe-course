@@ -1,0 +1,124 @@
+
+@media (min-width:768px) {
+    .wrapper{
+        width: 660px;
+    }
+
+    .promo{
+        min-height: 700px;
+    }
+
+    .page-header{
+        margin-bottom: 144px;
+    }
+
+    .site-logo,
+    .main-menu-nav-list
+   {
+        margin: 0;
+        padding: 0;
+    }
+
+    .main-menu-nav{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-top: 38px;
+    }
+
+    .title-site{
+        width: 500px;
+        font-size: 51px;
+        line-height: 62px;
+        margin-bottom: 28px;
+    }
+
+    .title-site-description{
+        font-size: 24px;
+        line-height: 29px;
+        width: 404px;
+       
+        padding: 0;
+        margin-bottom: 28px;
+    }
+
+    .butt-find{
+        min-width: 225px;
+    }
+
+    .partners{
+        padding-bottom: 40px;
+    }
+
+    .partners-title{
+        margin-bottom: 34px;
+    }
+
+    .partners-list{
+        width: 492px;
+        margin-bottom: 36px; 
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; 
+    }
+
+    .partners-list-item{
+        margin: 0;
+        width: 236px;
+        margin-bottom: 56px;
+
+        /* display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center; */
+    }
+
+    .partners-list-item:nth-last-child(-n+2) {
+        margin-bottom: 0;
+    }  
+
+    .partners-item-about{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .but-see{
+        min-width: 197px;
+    }
+}
+
+/* DESKTOP */
+@media (min-width:960px) {
+    .wrapper{
+        width: 940px;
+    }
+
+    .promo{
+        min-height: 700px;
+    }
+    
+    .title-site{
+        width: 500px;
+    }
+
+    .partners-list{
+        width: 942px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; 
+    }
+
+    .partners-list-item{
+        width: 220px;
+    }
+
+    .partners-list-item:nth-last-child(-n+4) {
+        margin-bottom: 0;
+    } 
+
+    .but-see{
+        min-width: 196px;
+    }
+}
