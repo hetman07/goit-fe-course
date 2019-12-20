@@ -1,7 +1,7 @@
-/*
+/* 
 *{
     outline: 1px solid red; 
-}*/
+} */
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden
@@ -40,15 +40,6 @@ img{
     display: block;
     max-width: 100%;
     height:auto;
-}
-
-.conteiner{
-    width: 1400px;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    padding: 0;
-    background-color: rgb(255, 255, 255);
 }
 
 .wrapper{
@@ -148,19 +139,14 @@ img{
 }
 
 .nav-menu-list-item:hover .nav-menu-list-item-link,
-.nav-menu-list-item:focus .nav-menu-list-item-link{
+.nav-menu-list-item:focus .nav-menu-list-item-link
+{
+    cursor: pointer;
     color:  rgb(254, 209, 54);
     transition: 200ms linear;   
 }
 
 /* service */
-main{
-    flex-grow: 1;
-    /* background: rgb(173, 173, 204); */
-    margin: 0 auto;
-    padding: 0;
-}
-
 .service{
     margin: 0 auto;
     margin-bottom: 118px;
@@ -254,7 +240,7 @@ main{
 }
 
 .service-list-item-title{
-    text-decoration: none;
+    
     font-size: 18px;
     line-height: 75px;
     color: rgb(34, 34, 34);
@@ -275,21 +261,28 @@ main{
 
 /* contact */
 .contact {
-    position: relative;
-    flex-basis: 1400px;
+   
     min-height: 676px;
     background-color: rgb(34, 34, 34);
+    
+    display: flex;
+    justify-content: center;   
+}
+
+.contact-img{
+    width: 1400px;
+    min-height: 618px;
+    display: flex;
+    align-items: center;
     background-image: url("../img/Map Image.png");
     background-position: right;
     background-repeat: no-repeat;
-    box-shadow: 2px 5px 2px 2px rgb(34, 34, 34);
-
-    display: flex;
-    justify-content: center;
-    
+ 
+    box-shadow: 2px 0px 2px 2px rgb(0, 0, 0);
 }
 
 .contact-title{
+
     color: rgb(255, 255, 255);
 }
 
@@ -354,37 +347,38 @@ main{
     color: rgb(187, 187, 187);
 }
 
-.contact-form-list-item select:selected{
-    color: aqua;
-    font: 700 14px "Montserrat";
-
+.contact-form-list-item input[type='text']:focus:invalid,
+.contact-form-list-item input[type='email']:focus:invalid,
+.contact-form textarea:focus:invalid{
+    outline-color: rgb(255,0,0); 
 }
 
-
-/* .contact-form-list-item input[type='text']:focus{
-    outline-color: aqua;
-}  */
-
-.contact-form-list-item input[type='text']:required,
-.contact-form-list-item input[type='email']:required,
-.contact-form textarea:required
-{
-    outline-color: rgb(255,0,0);
-     
+.contact-form-list-item input[type='text']:required:valid,
+.contact-form-list-item input[type='email']:required:valid,
+.contact-form textarea:required:valid{
+    outline-color: rgb(0,255,0); 
 }
 
- .contact-form-list-item input[type='email']:invalid{
+ .contact-form-list-item input[type='email']:focus:invalid{
     color: rgb(255, 0, 0);
 } 
 
+select{
+    text-transform: uppercase;   
+}
+
+/* .opt_def{
+    text-transform: uppercase;
+} */
+
 .contact-form-button{
+    border:  none;
+    text-decoration: none;
+
     display: block;
     margin: 0 auto;
     width: 240px;
     min-height: 66px;
-    border-radius: 3px;
-    background-color: rgb(254, 209, 54);
-    border-color:  rgb(254, 209, 54);;
     
     
     color: rgb(255, 255, 255);
@@ -392,13 +386,20 @@ main{
     font-family: "Montserrat";
     font-weight: 700;
     text-transform: uppercase;
-    
     line-height: 24px;
-    text-decoration: none;
+
     cursor: pointer;
+    background-color: rgb(34, 34, 34);
+    border-width: 2px;
+    border-radius: 3px;
+    border-style: outset;
+    transition: color 200ms linear;
 }
 
-
+.contact-form-button:hover{
+    background-color: rgb(254, 209, 54);
+    transition: 200ms linear;
+}
 
 
 
