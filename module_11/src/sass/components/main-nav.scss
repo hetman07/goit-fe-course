@@ -1,0 +1,5 @@
+.main-nav{
+    @include center-flex('all');  
+    min-height: 100px;
+    margin: 0;
+}

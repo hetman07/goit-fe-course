@@ -1,0 +1,33 @@
+%link{
+    display: inline-block;
+    text-decoration: none;
+}
+
+%list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+%button{
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+%sp-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+%marg-padg{
+    padding: 0;
+    margin: 0;
+}
+
+%marg-auto-padg{
+    padding: 0;
+    margin: 0 auto;
+}
