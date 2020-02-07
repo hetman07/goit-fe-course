@@ -3,8 +3,6 @@
     text-align: center;
     font-weight: 700;
     @include font-settings(30px, 36px);
-    // font-size: 30px;
-    // line-height: 36px;
     color: $main-font-color; /*цвет задаем так как это ссылка*/
     animation: logo-appear 1s linear;
 }

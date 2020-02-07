@@ -18,9 +18,7 @@
     &-text {
         font-family: $second-font-stack;
         font-weight: 400;
-        @include font-settings(15px, 24px);
-        // font-size: 15px;
-        // line-height: 24px;
+        @include font-settings();
         @extend %marg-auto-padg;
         color: $secondary-light-grey-color;
     }
@@ -35,9 +33,7 @@
     
     height: 32px;
     width: 32px;
-    @include bg-image('bg-cont');
-    // background-size: contain;
-    // background-position: center;
+    @include bg-image('bg-contain');
 }
 }
 

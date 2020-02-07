@@ -31,9 +31,7 @@
     &-ocupation{
         font-family: $second-font-stack;
         font-weight: 300;
-        @include font-settings(15px, 24px);
-        // font-size: 15px;
-        // line-height: 24px;
+        @include font-settings();
         font-style: italic;
         text-align: center;
         @extend %marg-auto-padg;
@@ -41,8 +39,7 @@
     }
 
     &-overlay{
-
-        @include center-flex('cntr-items');
+        @include align-flex('align-centr');
         width: 380px;
         height: 470px;
         position: absolute; /*подложку для hover item-team*/
@@ -56,14 +53,14 @@
         opacity: 0;
     }
 
-    &:hover &-overlay,
-    &:focus &-overlay
+    &:hover .team__item-overlay,
+    &:focus .team__item-overlay
     {    
         opacity: 1;
         transition: opacity 0.2s linear;
     }
 
-    &:hover &-img{
+    &:hover .team__item-img{
         transform: translate(-10px,-10px);
         transition: transform 0.2s linear; 
     }

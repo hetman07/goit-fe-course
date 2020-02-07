@@ -1,6 +1,6 @@
 .nav-menu{
     @extend %list;
-    @include center-flex('short');
+    @include sp-flex('sp-between');
     flex-basis: 612px;
 }
 

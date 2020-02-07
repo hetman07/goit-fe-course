@@ -13,7 +13,7 @@
 
 &__link{
 
-    @include center-flex('all-cntr');
+    @include align-flex('jc-centr');
 
     width: 56px;
     height: 56px;

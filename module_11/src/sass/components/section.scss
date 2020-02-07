@@ -21,6 +21,7 @@
     margin-top: 40px;/*зазор для рысочки от текста растояние*/
 }
 }
+
 .section__first{
     padding-top: 48px;
 }
@@ -30,8 +31,6 @@
     font-family: $main-font-cursive;
     font-weight: 400;
     @include font-settings(24px, 54px);
-    // font-size: 24px;
-    // line-height: 54px;
     text-transform: lowercase;   
 
 &::first-letter{
@@ -41,15 +40,13 @@
 
 .section__list{
     @extend %list;
-    @include center-flex('short') ;
+    @include sp-flex('sp-between') ;
 }
 
 .section__text{
     font-family: $second-font-stack;
     font-weight: 400;
-    @include font-settings(15px, 24px);
-    // font-size: 15px;
-    // line-height: 24px;
+    @include font-settings();
     @extend %marg-auto-padg;
     color: $secondary-light-grey-color;
     text-align: center;

@@ -4,7 +4,7 @@
                                          $bg-gradient-red
                                 ),
                 url("../images/Layer15.png");
-    @include bg-image('bg-short');
+    @include bg-image('bg-cover');
     color: $main-font-color;
     text-align: center;
 }
